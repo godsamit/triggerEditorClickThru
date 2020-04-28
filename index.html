@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta content="DreamCraft Gaming Platform">
+  <title>Trigger Editor</title>
+  <link rel="stylesheet" href="https://use.typekit.net/gyh0mpi.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/main.css">
+<!--  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/8b6dca0357.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body style="">
+  <section id="editor">
+    <div id="triggerListWrapper">
+      <div class="label">Components</div>
+      <input type="text" style="width: 300px;" placeholder="Search">
+      <div id="triggerList">
+        <ul id="myUL">
+          <li class="arcade"><span class="caret caret-down"><i class="fas fa-caret-down"></i>  Arcade/Core</span>
+            <ul class="active">
+              <li class="addable trigger">
+                <span>Triggers  
+                  <i class="fas fa-plus-square"></i>
+                </span>
+              </li>
+              <li class="addable variable"><span>Global Variables  <i class="fas fa-plus-square"></i></span></li>
+              <li class="addable function"><span>Functions  <i class="fas fa-plus-square"></i></span></li>
+            </ul>
+          </li>
+          <li class="current"><span class="caret caret-down"><i class="fas fa-caret-down"></i>  CURRENT</span>
+            <ul class="active">
+              <li class="addable trigger">
+                <span class="caret caret-down"><i class="fas fa-caret-down"></i>  Triggers  <i class="fas fa-plus-square"></i>
+                </span>
+                <ul class="active">
+                  <li class="editable"><span>Trigger 1 <i class="fas fa-minus-square"></i></span>
+                  </li>
+                  <li class="editable"><span>Trigger 2 <i class="fas fa-minus-square"></i></span>
+                  </li>
+                </ul>
+              </li>
+              <li class="addable variable"><span>Global Variables  <i class="fas fa-plus-square"></i></span></li>
+              <li class="addable function"><span>Functions  <i class="fas fa-plus-square"></i></span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="elemDetail">
+    <div class="label">Detail</div>
+    </div>
+    <div id="triggerComment">
+    <div class="label">Comment</div>
+    </div>
+  </section>
+  <script src="./script/components.js"></script>
+  <script src="./script/data.js"></script>
+  <script src="./script/view.js"></script>
+  </body>
+</html>

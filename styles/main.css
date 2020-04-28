@@ -1,0 +1,120 @@
+@font-face{
+  font-family:"HelveticaNeue Light";
+  src: url(./../fonts/HelveticaNeueLTPro-Lt.otf);
+}
+
+body{
+  font-family: "HelveticaNeue Light";
+}
+
+/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+html{
+  box-sizing: border-box;
+}
+/* Remove margins and padding from the parent ul */
+html, body, #myUL, h2, h3{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  margin-top: 15px;
+  display: block;
+  width: 400px;
+}
+/* Style the caret/arrow */
+.fa-caret-down,
+.fa-plus-square,
+.fa-minus-square,
+.fa-edit{
+  cursor: pointer;
+  user-select: none;
+  color: gray;
+  background-color: white;
+}
+.fa-plus-square,
+.fa-minus-square{
+  margin-left: 5px;
+}
+
+.caret-down .fa-caret-down{
+  transform: rotate(270deg);
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+#editor{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "a b"
+                      "a c";
+}
+#editor>div{
+  padding: 65px;
+  position:relative;
+  
+}
+#triggerListWrapper{
+  grid-area: a;
+  border-right: 1px solid grey;
+
+}
+#elemDetail{
+  min-width: 600px;
+  grid-area: b;
+  border-bottom: 1px solid grey;
+}
+#triggerComment{
+  grid-area: c;
+  min-height: 200px;
+}
+
+.label{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  font-weight:700;
+  background-color: grey;
+  color:white;
+  font-size:0.8em;
+}
+#triggerDetail{
+  width: 400px;
+}
+
+.editable, .active li ul li{
+  cursor: pointer;
+}
+
+.is-checked{
+  background-color: gray;
+  color:white;
+}
+.is-checked li{
+  background-color: white;
+  color:black;
+}
+
+#elemDetail li{
+  font-weight:normal;
+  font-size:16px;
+}
+textarea {
+  width: 300px;
+  height: 150px;
+  display: block;
+}
